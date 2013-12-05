@@ -29,7 +29,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 	ImageView img1, img2;		
 	ImageButton imgbtn1, imgbtn2;
 	Button btn1, btn2, btn3, btn4;
-	Animation anim1, anim2;
+	Animation anim1, anim2, anim3, anim4;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,18 +52,14 @@ public class MainActivity extends Activity implements OnTouchListener {
         btn4.setOnTouchListener(this);
 		
 		anim1 = AnimationUtils.loadAnimation(this, R.anim.img1_anim);
-		anim2 = AnimationUtils.loadAnimation(this, R.anim.imgbtn1_anim);
-		
-//		//ŒJ‚è•Ô‚·‰ñ”‚ğİ’èi‚P“x‚Å‚æ‚¢ê‡‚Íİ’è‚µ‚È‚¢j
-//		anim1.setInterpolator(new CycleInterpolator(10));
-																	
-//		//ŒJ‚è•Ô‚·‰ñ”‚ğİ’èi‚P“x‚Å‚æ‚¢ê‡‚Íİ’è‚µ‚È‚¢j
-//		anim2.setInterpolator(new CycleInterpolator(10));
+		anim2 = AnimationUtils.loadAnimation(this, R.anim.img1_anim);
+		anim3 = AnimationUtils.loadAnimation(this, R.anim.img1_anim);
+		anim4 = AnimationUtils.loadAnimation(this, R.anim.img1_anim);
 		
 		img1.startAnimation(anim1);
-		img2.startAnimation(anim1);
-		imgbtn1.startAnimation(anim2);
-		imgbtn2.startAnimation(anim2);
+		img2.startAnimation(anim2);
+		imgbtn1.startAnimation(anim3);
+		imgbtn2.startAnimation(anim4);
 	}
 
 	@Override
@@ -76,13 +72,13 @@ public class MainActivity extends Activity implements OnTouchListener {
 				img1.startAnimation(anim1);
 				break;
 			case R.id.button2:
-				img2.startAnimation(anim1);
+				img2.startAnimation(anim2);
 				break;
 			case R.id.button3:
-				imgbtn1.startAnimation(anim2);
+				imgbtn1.startAnimation(anim3);
 				break;
 			case R.id.button4:
-				imgbtn2.startAnimation(anim2);
+				imgbtn2.startAnimation(anim4);
 				break;
 			}
 			return true;
