@@ -3,6 +3,9 @@
 
     <string name="app_name">android_animation</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="btntxt1">左上</string>
+    <string name="btntxt2">右上</string>
+    <string name="btntxt3">左下</string>
+    <string name="btntxt4">右下</string>
 
 </resources>
