@@ -21,6 +21,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnTouchListener {
 	
@@ -59,6 +60,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 		img2.startAnimation(anim2);
 		imgbtn1.startAnimation(anim3);
 		imgbtn2.startAnimation(anim4);
+		
 	}
 
 	@Override
@@ -69,15 +71,19 @@ public class MainActivity extends Activity implements OnTouchListener {
 			switch (v.getId()) {
 			case R.id.button1:
 				img1.startAnimation(anim1);
+				Toast.makeText(this, "左上の画像をアニメーションしました。", Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.button2:
 				img2.startAnimation(anim2);
+				Toast.makeText(this, "右上の画像をアニメーションしました。", Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.button3:
 				imgbtn1.startAnimation(anim3);
+				Toast.makeText(this, "左下の画像をアニメーションしました。", Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.button4:
 				imgbtn2.startAnimation(anim4);
+				Toast.makeText(this, "右下の画像をアニメーションしました。", Toast.LENGTH_SHORT).show();
 				break;
 			}
 			return true;
